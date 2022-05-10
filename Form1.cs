@@ -12,6 +12,7 @@ namespace POO_Ejercicio1
 {
     public partial class Form1 : Form
     {
+        private int rowIndex = 0;
         public Form1()
         {
             InitializeComponent();
@@ -34,6 +35,17 @@ namespace POO_Ejercicio1
         }
 
         private void delete_Click(object sender, EventArgs e)
+        {
+            dataGridViewUsers.Rows.RemoveAt(rowIndex);
+
+        }
+
+        private void dataGridViewUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

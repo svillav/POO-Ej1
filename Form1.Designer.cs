@@ -77,7 +77,7 @@ namespace POO_Ejercicio1
             // textName
             // 
             this.textName.Location = new System.Drawing.Point(98, 29);
-            this.textName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textName.Margin = new System.Windows.Forms.Padding(2);
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(151, 20);
             this.textName.TabIndex = 3;
@@ -85,7 +85,7 @@ namespace POO_Ejercicio1
             // textLastName
             // 
             this.textLastName.Location = new System.Drawing.Point(98, 71);
-            this.textLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textLastName.Margin = new System.Windows.Forms.Padding(2);
             this.textLastName.Name = "textLastName";
             this.textLastName.Size = new System.Drawing.Size(151, 20);
             this.textLastName.TabIndex = 4;
@@ -93,7 +93,7 @@ namespace POO_Ejercicio1
             // textAge
             // 
             this.textAge.Location = new System.Drawing.Point(98, 114);
-            this.textAge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textAge.Margin = new System.Windows.Forms.Padding(2);
             this.textAge.Name = "textAge";
             this.textAge.Size = new System.Drawing.Size(151, 20);
             this.textAge.TabIndex = 5;
@@ -101,7 +101,7 @@ namespace POO_Ejercicio1
             // botonAgregar
             // 
             this.botonAgregar.Location = new System.Drawing.Point(45, 176);
-            this.botonAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.botonAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.botonAgregar.Name = "botonAgregar";
             this.botonAgregar.Size = new System.Drawing.Size(94, 38);
             this.botonAgregar.TabIndex = 6;
@@ -112,7 +112,7 @@ namespace POO_Ejercicio1
             // botonBorrar
             // 
             this.botonBorrar.Location = new System.Drawing.Point(153, 176);
-            this.botonBorrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.botonBorrar.Margin = new System.Windows.Forms.Padding(2);
             this.botonBorrar.Name = "botonBorrar";
             this.botonBorrar.Size = new System.Drawing.Size(94, 38);
             this.botonBorrar.TabIndex = 7;
@@ -128,12 +128,13 @@ namespace POO_Ejercicio1
             this.dgvLastName,
             this.dgvAge});
             this.dataGridViewUsers.Location = new System.Drawing.Point(286, 29);
-            this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.RowHeadersWidth = 62;
             this.dataGridViewUsers.RowTemplate.Height = 28;
             this.dataGridViewUsers.Size = new System.Drawing.Size(375, 185);
             this.dataGridViewUsers.TabIndex = 8;
+            this.dataGridViewUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsers_CellContentClick);
             // 
             // dgvName
             // 
@@ -154,6 +155,7 @@ namespace POO_Ejercicio1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(672, 252);
             this.Controls.Add(this.dataGridViewUsers);
             this.Controls.Add(this.botonBorrar);
@@ -164,9 +166,10 @@ namespace POO_Ejercicio1
             this.Controls.Add(this.edad);
             this.Controls.Add(this.apellido);
             this.Controls.Add(this.nombre);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
