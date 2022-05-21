@@ -31,6 +31,7 @@ namespace POO_Ejercicio1
             textName.Text = "";
             textLastName.Text = "";
             textAge.Text = "";
+            //este comentario
     
         }
 
